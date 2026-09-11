@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello, Tejas | Ninja Training</title>
+    <style>
+      :root {
+        --ink: #10223b;
+        --paper: #f6edd5;
+        --gold: #f5c940;
+        --red: #d83b31;
+        --jade: #168a72;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        align-items: center;
+        background: var(--paper);
+        color: var(--ink);
+        display: flex;
+        font-family: Arial, Helvetica, sans-serif;
+        justify-content: center;
+        margin: 0;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+
+      .scene {
+        background: radial-gradient(circle at 50% 35%, #fff9e8 0 17%, transparent 18%),
+          linear-gradient(135deg, #f6edd5 0 50%, #eddfbf 50%);
+        border: 12px solid var(--ink);
+        box-shadow: 16px 16px 0 var(--gold);
+        max-width: 920px;
+        min-height: 510px;
+        overflow: hidden;
+        padding: 48px 8vw;
+        position: relative;
+        text-align: center;
+        width: min(90vw, 920px);
+      }
+
+      .scene::before, .scene::after {
+        border: 5px solid var(--gold);
+        content: "";
+        height: 130px;
+        opacity: .8;
+        position: absolute;
+        transform: rotate(45deg);
+        width: 130px;
+      }
+      .scene::before { left: -78px; top: -72px; }
+      .scene::after { bottom: -78px; right: -72px; }
+
+      .badge {
+        align-items: center;
+        color: var(--red);
+        display: flex;
+        font-size: .75rem;
+        font-weight: 800;
+        gap: 10px;
+        justify-content: center;
+        letter-spacing: .16em;
+        text-transform: uppercase;
+      }
+      .badge::before, .badge::after { background: var(--red); content: ""; height: 3px; width: 36px; }
+
+      .ninja {
+        background: var(--jade);
+        border: 7px solid var(--ink);
+        border-radius: 48% 48% 24% 24%;
+        height: 105px;
+        margin: 22px auto 18px;
+        position: relative;
+        width: 92px;
+      }
+      .ninja::before {
+        background: var(--red);
+        border-bottom: 6px solid var(--ink);
+        border-top: 6px solid var(--ink);
+        content: "";
+        height: 30px;
+        left: -7px;
+        position: absolute;
+        top: 33px;
+        width: 92px;
+      }
+      .ninja::after {
+        background: var(--ink);
+        box-shadow: 34px 0 var(--ink);
+        content: "";
+        height: 9px;
+        left: 20px;
+        position: absolute;
+        top: 44px;
+        width: 9px;
+      }
+
+      h1 {
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-size: clamp(3rem, 10vw, 6.2rem);
+        letter-spacing: .035em;
+        line-height: .9;
+        margin: 0;
+        text-shadow: 5px 5px 0 var(--gold);
+        text-transform: uppercase;
+      }
+
+      .message { font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 700; margin: 24px auto 28px; max-width: 490px; }
+      .message strong { color: var(--red); }
+
+      .scroll {
+        background: var(--ink);
+        color: #fff8df;
+        display: inline-block;
+        font-size: .78rem;
+        font-weight: 800;
+        letter-spacing: .12em;
+        padding: 14px 20px;
+        text-transform: uppercase;
+      }
+
+      .stars { bottom: 22px; color: var(--gold); font-size: 1.35rem; left: 0; letter-spacing: .4em; position: absolute; right: 0; }
+      @media (max-width: 500px) { .scene { border-width: 8px; box-shadow: 9px 9px 0 var(--gold); min-height: 480px; padding: 42px 24px; } }
+    </style>
+  </head>
+  <body>
+    <main class="scene">
+      <div class="badge">Welcome to the dojo</div>
+      <div class="ninja" aria-hidden="true"></div>
+      <h1>Hello, Tejas</h1>
+      <p class="message">Your <strong>Ninja training</strong> begins now. Harness the power of Spinjitzu and build your legend.</p>
+      <div class="scroll">Chosen ninja</div>
+      <div class="stars" aria-hidden="true">★ ★ ★</div>
+    </main>
+  </body>
+</html>
